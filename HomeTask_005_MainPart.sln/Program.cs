@@ -58,18 +58,18 @@ namespace HomeTask_005_MainPart.sln
             while (!isCorrectNumber) 
             {
                 Console.WriteLine("Please enter an even integer...");
-                String userUnputString = Console.ReadLine();
-                bool isConvertCorrect = int.TryParse(userUnputString, out userInputValue);
+                String userInputString = Console.ReadLine();
+                bool isConvertCorrect = int.TryParse(userInputString, out userInputValue);
                 if (isConvertCorrect)
                 {
-                    userInputValue = int.Parse(userUnputString);
+                    userInputValue = int.Parse(userInputString);
                     isCorrectNumber = true;
                 }
                 else Console.WriteLine("Input error, please try again ");
             }
 
             // Variannt 1  --- using logical AND
-            Console.WriteLine("Accirding to check via Logical AND  your");
+            Console.WriteLine("According to check via Logical AND  your");
             if ((userInputValue & 1) == 0)
             { 
                 Console.WriteLine($"Value {userInputValue} is even");
@@ -78,7 +78,7 @@ namespace HomeTask_005_MainPart.sln
 
 
             // Varian 2 --- using bit shift
-            Console.WriteLine("Accirding to check via shifting to 31 bit your");
+            Console.WriteLine("According to check via shifting to 31 bit your");
             if ((userInputValue << 31) == 0)
             {
                 Console.WriteLine($"Value {userInputValue} is even");
